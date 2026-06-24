@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Projetos | Pedro Zaupa</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="cabecalho">
+    <a class="logo" href="index.html">Pedro Zaupa</a>
+
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="projetos.html">Projetos</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <main class="pagina">
+    <section class="conteudo-central">
+      <p class="etiqueta">Portfólio Técnico</p>
+
+      <h1>Projetos</h1>
+
+      <p class="texto-principal">
+        Seleção de projetos pessoais e técnicos desenvolvidos com foco em
+        sistemas, dados, inteligência geoespacial, infraestrutura, automação,
+        segurança e análise.
+      </p>
+
+      <div class="aviso">
+        <h2>Aviso sobre confidencialidade</h2>
+
+        <p>
+          Alguns projetos profissionais são descritos de forma resumida por
+          envolverem repositórios privados, informações protegidas, direitos
+          autorais, confidencialidade e acordos de não divulgação. Por esse
+          motivo, são apresentados apenas objetivos, tecnologias, competências
+          e estruturas gerais.
+        </p>
+      </div>
+
+      <div class="filtros-projetos">
+        <button class="botao-filtro ativo" data-filtro="todos" onclick="filtrarProjetos('todos')">
+          Todos
+        </button>
+
+        <button class="botao-filtro" data-filtro="pessoal" onclick="filtrarProjetos('pessoal')">
+          Pessoais
+        </button>
+
+        <button class="botao-filtro" data-filtro="profissional" onclick="filtrarProjetos('profissional')">
+          Profissionais
+        </button>
+
+        <button class="botao-filtro" data-filtro="dados" onclick="filtrarProjetos('dados')">
+          Dados
+        </button>
+
+        <button class="botao-filtro" data-filtro="geoespacial" onclick="filtrarProjetos('geoespacial')">
+          Geoespacial
+        </button>
+
+        <button class="botao-filtro" data-filtro="infraestrutura" onclick="filtrarProjetos('infraestrutura')">
+          Infraestrutura
+        </button>
+      </div>
+
+      <p id="contador-projetos" class="contador-projetos">
+        Mostrando todos os projetos.
+      </p>
+    </section>
+
+    <section class="secao">
+      <div class="conteudo-central">
+        <h2 class="titulo-secao">Projetos Pessoais e Públicos</h2>
+
+        <div class="lista-projetos">
+          <article class="card-projeto" data-categorias="pessoal java backend">
+            <h3>Sistema de Transações Financeiras em Java</h3>
+            <p class="categoria">Backend · Java · Regras de Negócio</p>
+            <p>Simulação de transações financeiras com validação e lógica.</p>
+            <p><strong>Ferramentas:</strong> Java, orientação a objetos e coleções.</p>
+            <p><strong>Skills:</strong> OOP, regras de negócio, validação e organização.</p>
+            <a href="https://github.com/PedroZaupa/transacao-simplificada" target="_blank" rel="noopener noreferrer">
+              Ver repositório no GitHub ↗
+            </a>
+          </article>
+
+          <article class="card-projeto" data-categorias="pessoal backend integracao">
+            <h3>Email Service</h3>
+            <p class="categoria">Backend · Serviços · Integração</p>
+            <p>Serviço de envio de emails inspirado em desafio técnico.</p>
+            <p><strong>Ferramentas:</strong> Java ou Node.js, API, validação e backend.</p>
+            <p><strong>Skills:</strong> abstração, camadas, integração e tratamento de erro.</p>
+            <a href="https://github.com/PedroZaupa/email-service.git" target="_blank" rel="noopener noreferrer">
+              Ver repositório no GitHub ↗
+            </a>
+          </article>
+
+          <article class="card-projeto" data-categorias="pessoal python automacao">
+            <h3>Análise Visual de Projetos e Normas Municipais</h3>
+            <p class="categoria">Python · Análise · Automação</p>
+            <p>Análise visual e comparação com normas municipais.</p>
+            <p><strong>Ferramentas:</strong> Python, Thrax, automação e processamento.</p>
+            <p><strong>Skills:</strong> análise normativa, automação e apoio à decisão.</p>
+            <a href="https://github.com/PedroZaupa/Projeto_autocad_reader.git" target="_blank" rel="noopener noreferrer">
+              Ver repositório no GitHub ↗
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="conteudo-central">
+        <h2 class="titulo-secao">Projetos Profissionais e Técnicos</h2>
+
+        <div class="lista-projetos">
+          <article class="card-projeto" data-categorias="profissional geoespacial dados backend">
+            <h3>Plataforma WebGIS de Inteligência Territorial</h3>
+            <p class="categoria">Geoespacial · Backend · Dados · Visualização</p>
+            <p>Plataforma interativa de mapas e análise territorial.</p>
+            <p>Estrutura com frontend cartográfico, API e banco espacial.</p>
+            <p><strong>Ferramentas:</strong> JavaScript, Leaflet, Node.js, PostgreSQL, PostGIS.</p>
+            <p><strong>Skills:</strong> APIs, mapas, SQL avançado, deploy e visualização.</p>
+          </article>
+
+          <article class="card-projeto" data-categorias="profissional infraestrutura seguranca">
+            <h3>Infraestrutura e Arquitetura de Servidores</h3>
+            <p class="categoria">Infraestrutura · Segurança · DevOps</p>
+            <p>Administração de servidor Linux com foco em segurança.</p>
+            <p>Uso de proxy reverso, VPN, firewall, backups, logs e serviços.</p>
+            <p><strong>Ferramentas:</strong> Debian, Docker, Nginx, WireGuard, LUKS, UFW.</p>
+            <p><strong>Skills:</strong> segurança, deploy, redes, monitoramento e operação.</p>
+          </article>
+
+          <article class="card-projeto" data-categorias="profissional backend seguranca">
+            <h3>Portal Web com Autenticação e Controle de Acesso</h3>
+            <p class="categoria">Backend · Segurança · Arquitetura Web</p>
+            <p>Sistema com login, autorização e recursos protegidos.</p>
+            <p>Backend modular, cookies seguros, rotas públicas e privadas.</p>
+            <p><strong>Ferramentas:</strong> NestJS, TypeScript, JWT, Prisma, Nginx.</p>
+            <p><strong>Skills:</strong> autenticação, autorização, backend e segurança web.</p>
+          </article>
+
+          <article class="card-projeto" data-categorias="profissional dados geoespacial automacao">
+            <h3>Sistema de Geocodificação de Endereços</h3>
+            <p class="categoria">Dados · Geoespacial · ETL</p>
+            <p>Pipeline para transformar endereços em coordenadas.</p>
+            <p>Processo com normalização, fallback e validação de qualidade.</p>
+            <p><strong>Ferramentas:</strong> Python, PostgreSQL, ViaCEP, Nominatim.</p>
+            <p><strong>Skills:</strong> ETL, qualidade de dados, automação e geocodificação.</p>
+          </article>
+
+          <article class="card-projeto" data-categorias="profissional dados backend">
+            <h3>Qualificação de Empresas por CNPJ</h3>
+            <p class="categoria">Dados · Inteligência · OSINT · Backend</p>
+            <p>Pipeline para análise empresarial com múltiplas fontes.</p>
+            <p>Cruzamento de dados cadastrais, fiscais e sinais externos.</p>
+            <p><strong>Ferramentas:</strong> Python, PostgreSQL, APIs públicas e SQL.</p>
+            <p><strong>Skills:</strong> modelagem, integração, OSINT e qualidade de dados.</p>
+          </article>
+
+          <article class="card-projeto" data-categorias="profissional geoespacial dados">
+            <h3>Estudos Territoriais em Grid de 200m</h3>
+            <p class="categoria">Geoespacial · Dados · Inteligência de Mercado</p>
+            <p>Análise territorial por células padronizadas de grid.</p>
+            <p>Cruzamento de consumo, renda, empresas e localização.</p>
+            <p><strong>Ferramentas:</strong> PostgreSQL, PostGIS, SQL e Python.</p>
+            <p><strong>Skills:</strong> scoring, análise espacial, modelagem e dados em escala.</p>
+          </article>
+
+          <article class="card-projeto" data-categorias="profissional dados automacao">
+            <h3>Coleta, Web Scraping e Cruzamento de Fontes</h3>
+            <p class="categoria">Dados · Automação · Integração</p>
+            <p>Rotinas para captura, limpeza e cruzamento de bases públicas.</p>
+            <p>Tratamento de formatos, duplicidades e inconsistências.</p>
+            <p><strong>Ferramentas:</strong> Python, PostgreSQL, APIs, CSV e JSON.</p>
+            <p><strong>Skills:</strong> scraping, automação, validação e integração de dados.</p>
+          </article>
+
+          <article class="card-projeto" data-categorias="profissional dados">
+            <h3>Leitura e Qualificação de Dados de Saúde Suplementar</h3>
+            <p class="categoria">Dados · Saúde · Análise Nacional</p>
+            <p>Organização de bases extensas de saúde e planos privados.</p>
+            <p>Padronização, tratamento e preparação para análise.</p>
+            <p><strong>Ferramentas:</strong> Python, PostgreSQL, SQL e bases públicas.</p>
+            <p><strong>Skills:</strong> grandes bases, qualidade, análise setorial e estruturação.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Pedro Zaupa — Portfólio pessoal</p>
+
+    <div class="links-rodape">
+      <a href="index.html">Início</a>
+      <a href="contato.html">Contato</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
